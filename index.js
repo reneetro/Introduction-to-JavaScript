@@ -55,7 +55,9 @@ Do the following:
    HINT: look up the Number method
 */
 let year = '1999';
-year = 1999;
+//year = 1999;
+year =
+Number.parseInt(year);
 console.log(year);
 
 
