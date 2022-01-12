@@ -177,33 +177,33 @@ if(computer === 0){
 }else(computer= 'scissors');
 // console.log(computer);
 function game(user, computer){
-  console.log(user + ' vs ' + computer)
+  //console.log(user + ' vs ' + computer)
   if (user === 'rock' && computer === 'rock'){
-    console.log('it\'s a tie!');
+    return 'it\'s a tie!';
   }else if(user === 'rock' && computer === 'paper'){
-    console.log('you lose!');
+    return 'you lose!';
   }else if(user === 'rock' && computer === 'scissors'){
-    console.log('you win!');
+    return 'you win!';
   }  
   
   if (user === 'paper' && computer === 'rock'){
-    console.log('you win!');
+    return 'you win!';
   }else if(user === 'paper' && computer === 'paper'){
-    console.log('it\'s a tie');
+    return 'it\'s a tie';
   }else if(user === 'paper' && computer === 'scissors'){
-    console.log('you lose!');
+    return 'you lose!';
   }
 
   if (user === 'scissors' && computer === 'rock'){
-    console.log('you lose!');
+    return 'you lose!';
   }else if(user === 'scissors' && computer === 'paper'){
-    console.log('you win!');
+    return 'you win!';
   }else if(user === 'scissors' && computer === 'scissors'){
-    console.log('it\'s a tie');
+    return'it\'s a tie';
   }
 }
 
-game('rock', computer);
+console.log(game('rock', computer));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
