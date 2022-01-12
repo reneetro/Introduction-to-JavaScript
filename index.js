@@ -142,7 +142,7 @@ function hungryDog(weight, age){
   }else if (age >= (1/3)){
     return weight*(1/20);
   }else if (age >= (7/12)){
-    return weight*(1/25);
+    return weight*(.1458333);
   }
 }
 console.log(hungryDog(5, .6));
@@ -179,7 +179,7 @@ if(computer === 0){
 function game(user, computer){
   //console.log(user + ' vs ' + computer)
   if (user === 'rock' && computer === 'rock'){
-    return 'it\'s a tie!';
+    return 'it\'s a tie';
   }else if(user === 'rock' && computer === 'paper'){
     return 'you lose!';
   }else if(user === 'rock' && computer === 'scissors'){
@@ -218,7 +218,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-  return kilometers*0.62137119
+  return kilometers*0.621371
 }
 console.log(miles(20));
 
@@ -233,7 +233,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return cm* 0.0328084
+  return cm/30.48
 }
 console.log(feet(10));
 
