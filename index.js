@@ -145,7 +145,7 @@ function hungryDog(weight, age){
     return weight*(1/25);
   }
 }
-console.log(hungryDog(5, .5));
+console.log(hungryDog(5, .6));
 //NOTE I did not need to set the ranges, the code would have stopped at the first condition met, whoops
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -278,7 +278,7 @@ function grade(score){
   } else if (score >= 70){
     return 'you got a C';
   } else if (score >= 60){
-    return 'you got an D';
+    return 'you got a D';
   } else if (score < 60){
     return 'you got an F';
   }
