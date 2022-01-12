@@ -137,11 +137,11 @@ function hungryDog(weight, age){
     return weight*(3/100);
   }else if (age>=1 && weight>15){
     return weight*(1/50);
-  }else if (age >= (1/6) && age < (1/3)){
+  }else if (age >= (1/6)){
     return weight*(1/10);
-  }else if (age >= (1/3) && age < (7/12)){
+  }else if (age >= (1/3)){
     return weight*(1/20);
-  }else if (age >= (7/12) && age < 1){
+  }else if (age >= (7/12)){
     return weight*(1/25);
   }
 }
@@ -270,10 +270,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if (score >= 90){
+    return 'you got an A';
+  }
+  if (score >= 80){
+    return 'you got a B';
+  }
+  if (score >= 70){
+    return 'you got a C';
+  }
+  if (score >= 60){
+    return 'you got an F';
+  }
 }
-
+console.log(grade(85));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
