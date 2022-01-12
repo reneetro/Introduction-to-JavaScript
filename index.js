@@ -181,9 +181,9 @@ function game(user, computer){
   if (user === 'rock' && computer === 'rock'){
     console.log('it\'s a tie!');
   }else if(user === 'rock' && computer === 'paper'){
-    console.log('you lose :(');
+    console.log('you lose!');
   }else if(user === 'rock' && computer === 'scissors'){
-    console.log('you win! :)');
+    console.log('you win!');
   }  
   
   if (user === 'paper' && computer === 'rock'){
@@ -191,19 +191,19 @@ function game(user, computer){
   }else if(user === 'paper' && computer === 'paper'){
     console.log('it\'s a tie');
   }else if(user === 'paper' && computer === 'scissors'){
-    console.log('you lose');
+    console.log('you lose!');
   }
 
   if (user === 'scissors' && computer === 'rock'){
-    console.log('you lose');
+    console.log('you lose!');
   }else if(user === 'scissors' && computer === 'paper'){
-    console.log('you win');
+    console.log('you win!');
   }else if(user === 'scissors' && computer === 'scissors'){
     console.log('it\'s a tie');
   }
 }
 
-game('paper', computer);
+game('rock', computer);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -273,16 +273,16 @@ Using the grade function below do the following:
 function grade(score){
   if (score >= 90){
     return 'you got an A';
-  }
-  if (score >= 80){
+  } else if (score >= 80){
     return 'you got a B';
-  }
-  if (score >= 70){
+  } else if (score >= 70){
     return 'you got a C';
-  }
-  if (score >= 60){
+  } else if (score >= 60){
+    return 'you got an D';
+  } else if (score < 60){
     return 'you got an F';
   }
+  
 }
 console.log(grade(85));
 
