@@ -55,7 +55,9 @@ Do the following:
    HINT: look up the Number method
 */
 let year = '1999';
-year = 1999;
+//year = 1999;
+year =
+Number.parseInt(year);
 console.log(year);
 
 
@@ -135,15 +137,15 @@ function hungryDog(weight, age){
     return weight*(3/100);
   }else if (age>=1 && weight>15){
     return weight*(1/50);
-  }else if (age >= (1/6) && age < (1/3)){
+  }else if (age >= (1/6)){
     return weight*(1/10);
-  }else if (age >= (1/3) && age < (7/12)){
+  }else if (age >= (1/3)){
     return weight*(1/20);
-  }else if (age >= (7/12) && age < 1){
-    return weight*(1/25);
+  }else if (age >= (7/12)){
+    return weight*(.1458333);
   }
 }
-console.log(hungryDog(5, .5));
+console.log(hungryDog(5, .6));
 //NOTE I did not need to set the ranges, the code would have stopped at the first condition met, whoops
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -175,33 +177,33 @@ if(computer === 0){
 }else(computer= 'scissors');
 // console.log(computer);
 function game(user, computer){
-  console.log(user + ' vs ' + computer)
+  //console.log(user + ' vs ' + computer)
   if (user === 'rock' && computer === 'rock'){
-    console.log('it\'s a tie!');
+    return 'it\'s a tie';
   }else if(user === 'rock' && computer === 'paper'){
-    console.log('you lose :(');
+    return 'you lose!';
   }else if(user === 'rock' && computer === 'scissors'){
-    console.log('you win! :)');
+    return 'you win!';
   }  
   
   if (user === 'paper' && computer === 'rock'){
-    console.log('you win!');
+    return 'you win!';
   }else if(user === 'paper' && computer === 'paper'){
-    console.log('it\'s a tie');
+    return 'it\'s a tie';
   }else if(user === 'paper' && computer === 'scissors'){
-    console.log('you lose');
+    return 'you lose!';
   }
 
   if (user === 'scissors' && computer === 'rock'){
-    console.log('you lose');
+    return 'you lose!';
   }else if(user === 'scissors' && computer === 'paper'){
-    console.log('you win');
+    return 'you win!';
   }else if(user === 'scissors' && computer === 'scissors'){
-    console.log('it\'s a tie');
+    return'it\'s a tie';
   }
 }
 
-game('paper', computer);
+console.log(game('rock', computer));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -216,7 +218,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-  return kilometers*0.62137119
+  return kilometers*0.621371
 }
 console.log(miles(20));
 
@@ -231,7 +233,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return cm* 0.0328084
+  return cm/30.48
 }
 console.log(feet(10));
 
@@ -246,10 +248,12 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(num){
+      for(let i =num; num>0; num--){
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
+      }
 }
-
+console.log(annoyingSong(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -266,10 +270,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if (score >= 90){
+    return 'you got an A';
+  } else if (score >= 80){
+    return 'you got a B';
+  } else if (score >= 70){
+    return 'you got a C';
+  } else if (score >= 60){
+    return 'you got a D';
+  } else if (score < 60){
+    return 'you got an F';
+  }
+  
 }
-
+console.log(grade(85));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -285,8 +300,8 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter() {
+  
 }
 
 
